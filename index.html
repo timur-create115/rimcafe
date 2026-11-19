@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Демонстрационный сайт уютного ресторана РИМ КАФЕ." />
+    <meta name="theme-color" content="#f8f1e8" />
+    <title>РИМ КАФЕ — уютное место для встреч</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержимому</a>
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="#home" aria-label="РИМ КАФЕ — на главную"><img src="images/rim-cafe-logo.png" alt="РИМ КАФЕ" /></a>
+        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav" data-nav-toggle><span></span><span></span><span></span></button>
+        <nav class="nav" id="nav" aria-label="Основная навигация" data-nav>
+          <a href="#home">Главная</a><a href="#menu">Меню</a><a href="#about">О нас</a><a href="#contacts">Контакты</a>
+          <button class="nav__booking" type="button" data-open-booking>Забронировать столик</button>
+        </nav>
+        <div class="header__actions"><button class="cart-button" type="button" data-open-cart aria-label="Открыть корзину">Корзина <span data-cart-count>0</span></button><button class="header__booking" type="button" data-open-booking>Заказать столик</button></div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow">Кафе с доброй атмосферой</p>
+            <h1 id="hero-title"><span class="logo-letter logo-letter--r">Р</span>ИМ <span class="logo-letter logo-letter--k">К</span>АФЕ</h1>
+            <p class="hero__lead">Уютное место для вкусной еды<br />и приятных встреч</p>
+            <div class="hero__actions"><a class="button button--solid" href="#menu">Посмотреть меню</a><button class="button button--outline" type="button" data-open-booking>Забронировать столик</button></div>
+            <ul class="benefits" aria-label="Преимущества кафе"><li><strong>Разнообразное меню</strong><span>Для обеда, ужина и встречи</span></li><li><strong>Свежие ингредиенты</strong><span>Готовим после вашего заказа</span></li><li><strong>Уютная атмосфера</strong><span>Тёплый свет и спокойный ритм</span></li></ul>
+          </div>
+          <div class="hero__visual"><div class="sun"></div><img src="images/pizza-rim-unique.png" alt="Авторская пицца с сыром, томатами и базиликом" /></div>
+        </div>
+      </section>
+
+      <section class="menu section" id="menu" aria-labelledby="menu-title">
+        <div class="container">
+          <div class="title-row"><span></span><h2 id="menu-title">Меню</h2><span></span></div>
+          <div class="menu-tabs" role="tablist" aria-label="Категории меню">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" data-category="all">Все</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-category="pizza">Пицца</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-category="rolls">Роллы</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-category="salads">Салаты</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-category="fast">Бургеры</button>
+          </div>
+          <div class="menu-grid" data-menu-grid aria-live="polite"></div>
+          <p class="demo-note">Демо-меню: наличие и точные цены уточняйте у заведения.</p>
+        </div>
+      </section>
+
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="container about__grid">
+          <div class="about__image"><img src="images/interior-rim.png" alt="Светлый уютный интерьер кафе" /></div>
+          <div class="about__copy"><p class="eyebrow">Немного о нас</p><h2 id="about-title">Встречи, которые хочется повторять</h2><p>РИМ КАФЕ — место для неспешных завтраков, семейных ужинов и разговоров за чашкой кофе. Мы собрали понятное меню, мягкий свет и тёплую атмосферу, чтобы каждый гость чувствовал себя как дома.</p><button class="text-button" type="button" data-open-booking>Выбрать столик <span>→</span></button></div>
+        </div>
+      </section>
+
+      <section class="contacts section" id="contacts" aria-labelledby="contacts-title">
+        <div class="container contacts__grid">
+          <div><p class="eyebrow">Контакты</p><h2 id="contacts-title">Заглядывайте в гости</h2><div class="contact-list"><a href="tel:+78722555555">+7 (8722) 55-55-55</a><a href="mailto:hello@rimcafe.demo">hello@rimcafe.demo</a><p>г. Махачкала, ул. Аскерханова, 16</p></div><div class="socials"><a href="https://t.me/" target="_blank" rel="noreferrer">Telegram</a><a href="https://vk.com/" target="_blank" rel="noreferrer">VK</a></div></div>
+          <div class="map-card"><iframe title="Карта: РИМ КАФЕ, Махачкала, Аскерханова, 16" src="https://www.google.com/maps?q=%D0%9C%D0%B0%D1%85%D0%B0%D1%87%D0%BA%D0%B0%D0%BB%D0%B0%2C%20%D0%90%D1%81%D0%BA%D0%B5%D1%80%D1%85%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0%2C%2016&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><a href="https://www.google.com/maps/search/?api=1&query=%D0%9C%D0%B0%D1%85%D0%B0%D1%87%D0%BA%D0%B0%D0%BB%D0%B0%2C%20%D0%90%D1%81%D0%BA%D0%B5%D1%80%D1%85%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0%2C%2016" target="_blank" rel="noreferrer">Махачкала · Аскерханова, 16</a></div>
+          <div class="hours"><p class="eyebrow">Время работы</p><h3>Ждём вас каждый день</h3><p class="hours__time">Пн–Вс: 08:00 — 23:00</p><button class="button button--solid" type="button" data-open-booking>Забронировать</button></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="container footer__inner"><a class="brand brand--footer" href="#home"><img src="images/rim-cafe-logo.png" alt="РИМ КАФЕ" /></a><nav aria-label="Навигация в подвале"><a href="#menu">Меню</a><a href="#about">О нас</a><a href="#contacts">Контакты</a></nav><p>© <span data-year></span> РИМ КАФЕ · демо-версия</p></div></footer>
+
+    <div class="cart-backdrop" data-cart-backdrop></div>
+    <aside class="cart-drawer" aria-labelledby="cart-title" aria-hidden="true" data-cart-drawer><div class="cart-drawer__head"><div><p class="eyebrow">Ваш заказ</p><h2 id="cart-title">Корзина</h2></div><button class="dialog-close" type="button" data-close-cart aria-label="Закрыть корзину">×</button></div><div class="cart-drawer__body" data-cart-body></div><div class="cart-drawer__bottom" data-cart-footer hidden><div><span>Итого</span><strong data-cart-total>0 ₽</strong></div><button class="button button--solid" type="button" data-demo-order>Оформить заказ</button><small>Демо: заказ никуда не отправляется.</small></div></aside>
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+    <dialog class="booking-dialog" data-booking-dialog aria-labelledby="booking-title"><button class="dialog-close" type="button" data-close-booking aria-label="Закрыть">×</button><div data-booking-content><p class="eyebrow">Бронирование</p><h2 id="booking-title">Оставьте заявку</h2><p>Мы подтвердим столик по телефону. В этой демо-версии заявка никуда не отправляется.</p><form data-booking-form novalidate><label>Ваше имя<input name="name" autocomplete="name" required /></label><label>Телефон<input name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required /></label><div class="form-pair"><label>Дата<input name="date" type="date" required /></label><label>Гостей<select name="guests" required><option value="">—</option><option>1–2</option><option>3–4</option><option>5–6</option><option>7+</option></select></label></div><button class="button button--solid" type="submit">Отправить заявку</button></form></div><div class="booking-success" hidden data-booking-success><div>✓</div><p class="eyebrow">Заявка принята</p><h2>Столик предварительно забронирован</h2><p>Спасибо! Это визуальная демонстрация — данные не были отправлены.</p><button class="button button--solid" type="button" data-close-booking>Вернуться на сайт</button></div></dialog>
+  </body>
+</html>
